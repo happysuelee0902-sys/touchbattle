@@ -18,48 +18,58 @@
     width: 80%;
   }
 }
-/* 가운데 정렬용 */
-body {
+
+
+#title {
+  font-size: 40px;
+  font-weight: 800;
   font-family: Yoon 초록우산어린이 만세, sans-serif;
-  color:black;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  top:250px;
+  left: 100px;
 }
 
-/* 제목/설명 */
-#title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
 #explanation {
   font-size: 1rem;
   color: black;
   margin-bottom: 1.8rem;
+  font-family: Yoon 초록우산어린이 만세, sans-serif;
+  position: fixed;
+  top:330px;
+  left: 150px;
 }
 
 
 #start-button {
-  display: inline-block;
-  padding: 0.8rem 2.4rem;
-  border-radius: 999px;
-  color: black;
+position: fixed;
+top:380px;
+left: 100px;
+  color: white;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 20px;
   text-decoration: none; 
-  transition: transform 0.08s ease-out, box-shadow 0.08s ease-out, filter 0.08s ease-out;
+  font-family: Yoon 초록우산어린이 만세, sans-serif;
+  width: 100px;
+  height: 40px;
+  background-color:deeppink;
+  border-radius: 10px;
+  text-align: center;
+  
 }
 
-#start-button:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.1);
-  box-shadow: 0 14px 30px rgba(255, 0, 191, 0.8);
-}
 
-#start-button:active {
-  transform: translateY(1px) scale(0.98);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8);
+#none-button{
+  text-decoration: none;
+  color:white;
+   font-family: Yoon 초록우산어린이 만세, sans-serif;
+   position: fixed;
+top:380px;
+left: 260px;
+  font-weight: 700;
+  font-size: 20px;
+   width: 100px;
+  height: 40px;
+  background-color:deepskyblue;
+  border-radius: 10px;
+  text-align: center;
 }
