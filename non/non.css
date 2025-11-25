@@ -1,5 +1,9 @@
 #next-text{
-
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  font-size: 30px;
+  font-weight: bold;
 }
 #non-imge{
   position: fixed;
