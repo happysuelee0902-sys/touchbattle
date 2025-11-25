@@ -26,7 +26,7 @@
   font-family: Yoon 초록우산어린이 만세, sans-serif;
   position: fixed;
   top:250px;
-  left: 100px;
+  left: 90px;
 }
 
 #explanation {
@@ -36,14 +36,16 @@
   font-family: Yoon 초록우산어린이 만세, sans-serif;
   position: fixed;
   top:330px;
-  left: 150px;
+  left: 130px;
 }
+
+
 
 
 #start-button {
 position: fixed;
 top:380px;
-left: 100px;
+left: 80px;
   color: white;
   font-weight: 700;
   font-size: 20px;
@@ -64,7 +66,7 @@ left: 100px;
    font-family: Yoon 초록우산어린이 만세, sans-serif;
    position: fixed;
 top:380px;
-left: 260px;
+left: 240px;
   font-weight: 700;
   font-size: 20px;
    width: 100px;
@@ -72,4 +74,72 @@ left: 260px;
   background-color:deepskyblue;
   border-radius: 10px;
   text-align: center;
+}
+/* 풍선 기본 스타일 */
+.balloon {
+  position: absolute;
+  width: 120px;               /* 풍선 크기 */
+  cursor: pointer;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* 각 풍선 위치/애니메이션 다르게 */
+#index-img1 {
+  top: 60%;
+  left: 10%;
+  animation-name: float1;
+  animation-duration: 10s;
+}
+
+#index-img2 {
+  top: 50%;
+  left: 45%;
+  animation-name: float2;
+  animation-duration: 12s;
+}
+
+#index-img3 {
+  top: 65%;
+  left: 70%;
+  animation-name: float3;
+  animation-duration: 9s;
+}
+#index-img4 {
+  top: 30%;
+  left: 70%;
+  animation-name: float3;
+  animation-duration: 9s;
+}
+
+#index-img5 {
+  top: 10%;
+  left: 20%;
+  animation-name: float3;
+  animation-duration: 9s;
+}
+
+/* 떠다니는 모션 */
+@keyframes float1 {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(-10px, -40px); }
+  100% { transform: translate(15px, -80px); }
+}
+
+@keyframes float2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(20px, -30px) scale(1.05); }
+  100% { transform: translate(-10px, -70px) scale(0.95); }
+}
+
+@keyframes float3 {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(-15px, -35px); }
+  100% { transform: translate(10px, -90px); }
+}
+
+/* 화면 밖으로 안 튀어나가게 */
+body {
+  overflow: hidden;
 }
