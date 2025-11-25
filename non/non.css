@@ -4,11 +4,97 @@
   left: 90px;
   font-size: 30px;
   font-weight: bold;
+  font-family: 'YoonChoWooSan', sans-serif;
 }
 #non-imge{
   position: fixed;
   top: 200px;
-  left: 100px;
-  width: 250px;
+  left: 90px;
+  width: 350px;
   height: 250px;
+}
+html, body {
+  font-family: 'YoonChoWooSan', sans-serif;
+}
+@font-face {
+  font-family: 'YoonChoWooSan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #ffffff;
+}
+
+/* 상단 텍스트 */
+#next-text {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* 괴물 이미지 */
+
+
+/* HP 바 컨테이너 */
+#hp-container {
+  width: 80%;
+  max-width: 300px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin: 10px auto 0;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+/* 실제 HP 게이지 */
+#hp-bar {
+  width: 100%;          /* 처음에는 풀피 */
+  height: 100%;
+  background-color: crimson;
+  transition: width 0.2s ease;
+}
+
+/* "날 이겨라" 텍스트 */
+#sorry {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 뒤로가기 버튼 – 처음엔 숨김 */
+#back-btn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  display: none;   /* JS에서 HP 0되면 block으로 바꿔줌 */
+}
+
+/* 모바일 대응 */
+@media (max-width: 480px) {
+  #next-text {
+    font-size: 1.2rem;
+  }
+
+  #non-imge {
+    width: 160px;
+  }
+
+  #back-btn {
+    width: 70%;
+  }
 }
