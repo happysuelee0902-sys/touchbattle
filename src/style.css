@@ -4,7 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+    font-family: 'YoonChoWooSan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
 
+html, body {
+  font-family: 'YoonChoWooSan', sans-serif;
+}
 
 /* 모바일 대응 */
 @media (max-width: 480px) {

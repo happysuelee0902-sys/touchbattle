@@ -1,9 +1,11 @@
 // 풍선 이미지 클릭/터치 시 사라지게 하기
+ClickBattle.init("8UE");
 const balloons = document.querySelectorAll('.balloon');
 
 balloons.forEach((balloon) => {
   const pop = (event) => {
     // 모바일에서 스크롤 대신 터치 한번만 인식하도록
+    ClickBattle.recordClick();
     event.preventDefault();
 
     // 부드럽게 사라지는 효과
@@ -19,3 +21,8 @@ balloons.forEach((balloon) => {
   balloon.addEventListener('click', pop);
   balloon.addEventListener('touchstart', pop, { passive: false });
 });
+
+
+
+
+ClickBattle.recordClick();
