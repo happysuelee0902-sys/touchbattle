@@ -6,7 +6,8 @@
 }
 
 /* 폰트 전역 적용 */
-html, body {
+html,
+body {
   font-family: 'YoonChoWooSan', sans-serif;
 }
 
@@ -31,6 +32,7 @@ html, body {
   text-decoration: none;
   font-family: 'YoonChoWooSan', sans-serif;
 }
+
 #start-button3 {
   position: fixed;
   top: 400px;
@@ -41,7 +43,8 @@ html, body {
   text-decoration: none;
   font-family: 'YoonChoWooSan', sans-serif;
 }
-#start-button4{
+
+#start-button4 {
   position: fixed;
   top: 400px;
   left: 200px;

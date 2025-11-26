@@ -1,5 +1,4 @@
-// 풍선 이미지 클릭/터치 시 사라지게 하기
-ClickBattle.init("8UE");
+
 const balloons = document.querySelectorAll('.balloon');
 
 balloons.forEach((balloon) => {
@@ -23,6 +22,3 @@ balloons.forEach((balloon) => {
 });
 
 
-
-
-ClickBattle.recordClick();
