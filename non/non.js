@@ -5,8 +5,9 @@ const MAX_HP = 8;
 let currentHp = MAX_HP;
 
 const monster = document.getElementById('non-imge');
-const hpBar   = document.getElementById('hp-bar');
+const hpBar = document.getElementById('hp-bar');
 const backBtn = document.getElementById('back-btn');
+const sorryText = document.getElementById('sorry');
 
 // HP 바 업데이트 함수
 function updateHpBar() {
@@ -17,6 +18,7 @@ function updateHpBar() {
     // 괴물 숨기고 뒤로가기 버튼 표시
     monster.style.display = 'none';
     backBtn.style.display = 'inline-block';
+    sorryText.innerText = "알겠어 가라..";
   }
 }
 
@@ -43,3 +45,14 @@ monster.addEventListener(
 
 // 처음 로딩 시 HP 바 세팅
 updateHpBar();
+
+// Interstitial Overlay Logic
+const overlay = document.getElementById('interstitial-overlay');
+
+backBtn.addEventListener('click', () => {
+  overlay.style.display = 'flex';
+});
+
+overlay.addEventListener('click', () => {
+  window.location.href = '../qu1/qu1.html';
+});

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'YoonChoWooSan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+/* 폰트 전역 적용 */
+html,
+body {
+    font-family: 'YoonChoWooSan', sans-serif;
+}
+
+#title {
+    font-size: 50px;
+    position: fixed;
+    top: 200px;
+    left: 90px;
+}
+
+#start-button1 {
+    position: fixed;
+    top: 400px;
+    left: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'YoonChoWooSan', sans-serif;
+}
+
+#start-button2 {
+    position: fixed;
+    top: 400px;
+    left: 140px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'YoonChoWooSan', sans-serif;
+}
+
+#start-button3 {
+    position: fixed;
+    top: 400px;
+    left: 225px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'YoonChoWooSan', sans-serif;
+}
+
+#start-button4 {
+    position: fixed;
+    top: 400px;
+    left: 330px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'YoonChoWooSan', sans-serif;
+}

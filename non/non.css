@@ -1,4 +1,4 @@
-#next-text{
+#next-text {
   position: fixed;
   top: 100px;
   left: 90px;
@@ -6,22 +6,27 @@
   font-weight: bold;
   font-family: 'YoonChoWooSan', sans-serif;
 }
-#non-imge{
+
+#non-imge {
   position: fixed;
   top: 200px;
   left: 90px;
   width: 350px;
-  height: 250px;
+  height: auto;
 }
-html, body {
+
+html,
+body {
   font-family: 'YoonChoWooSan', sans-serif;
 }
+
 @font-face {
   font-family: 'YoonChoWooSan';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
   font-weight: normal;
   font-display: swap;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -58,7 +63,8 @@ body {
 
 /* 실제 HP 게이지 */
 #hp-bar {
-  width: 100%;          /* 처음에는 풀피 */
+  width: 100%;
+  /* 처음에는 풀피 */
   height: 100%;
   background-color: crimson;
   transition: width 0.2s ease;
@@ -69,6 +75,7 @@ body {
   margin-top: 20px;
   font-size: 20px;
   font-weight: 600;
+  font-family: 'YoonChoWooSan', sans-serif;
 }
 
 /* 뒤로가기 버튼 – 처음엔 숨김 */
@@ -81,7 +88,9 @@ body {
   background-color: #333;
   color: #fff;
   cursor: pointer;
-  display: none;   /* JS에서 HP 0되면 block으로 바꿔줌 */
+  display: none;
+  font-family: 'YoonChoWooSan', sans-serif;
+  /* JS에서 HP 0되면 block으로 바꿔줌 */
 }
 
 /* 모바일 대응 */
@@ -91,10 +100,31 @@ body {
   }
 
   #non-imge {
-    width: 160px;
+    width: 300px;
+    height: auto;
   }
 
   #back-btn {
     width: 70%;
   }
+}
+
+/* Interstitial Overlay */
+#interstitial-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  display: none;
+  /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 9999;
+  font-family: 'YoonChoWooSan', sans-serif;
+  cursor: pointer;
 }

@@ -12,7 +12,8 @@
 }
 
 /* 폰트 전역 적용 */
-html, body {
+html,
+body {
   font-family: 'YoonChoWooSan', sans-serif;
 }
 
@@ -21,9 +22,11 @@ html, body {
   #title {
     font-size: 1.8rem;
   }
+
   #explanation {
     font-size: 0.9rem;
   }
+
   #start-button {
     width: 80%;
   }
@@ -84,7 +87,8 @@ html, body {
 /* 풍선 기본 스타일 */
 .balloon {
   position: absolute;
-  width: 120px;               /* 풍선 크기 */
+  width: 120px;
+  /* 풍선 크기 */
   cursor: pointer;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -129,24 +133,104 @@ html, body {
 
 /* 떠다니는 모션 */
 @keyframes float1 {
-  0%   { transform: translate(0, 0); }
-  50%  { transform: translate(-10px, -40px); }
-  100% { transform: translate(15px, -80px); }
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-10px, -40px);
+  }
+
+  100% {
+    transform: translate(15px, -80px);
+  }
 }
 
 @keyframes float2 {
-  0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(20px, -30px) scale(1.05); }
-  100% { transform: translate(-10px, -70px) scale(0.95); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(20px, -30px) scale(1.05);
+  }
+
+  100% {
+    transform: translate(-10px, -70px) scale(0.95);
+  }
 }
 
 @keyframes float3 {
-  0%   { transform: translate(0, 0); }
-  50%  { transform: translate(-15px, -35px); }
-  100% { transform: translate(10px, -90px); }
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-15px, -35px);
+  }
+
+  100% {
+    transform: translate(10px, -90px);
+  }
 }
 
 /* 화면 밖으로 안 튀어나가게 */
 body {
   overflow: hidden;
+}
+
+/* 달그락 거리는 애니메이션 */
+@keyframes rattle {
+  0% {
+    transform: translate(0.5px, 0.5px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-0.5px, -1px) rotate(-0.5deg);
+  }
+
+  20% {
+    transform: translate(-1.5px, 0px) rotate(0.5deg);
+  }
+
+  30% {
+    transform: translate(1.5px, 1px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(0.5px, -0.5px) rotate(0.5deg);
+  }
+
+  50% {
+    transform: translate(-0.5px, 1px) rotate(-0.5deg);
+  }
+
+  60% {
+    transform: translate(-1.5px, 0.5px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(1.5px, 0.5px) rotate(-0.5deg);
+  }
+
+  80% {
+    transform: translate(-0.5px, -0.5px) rotate(0.5deg);
+  }
+
+  90% {
+    transform: translate(0.5px, 1px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0.5px, -1px) rotate(-0.5deg);
+  }
+}
+
+#balloon {
+  font-size: 13px;
+  position: fixed;
+  top: 600px;
+  left: 280px;
+  animation: rattle 0.5s infinite;
+  /* 애니메이션 적용 */
 }

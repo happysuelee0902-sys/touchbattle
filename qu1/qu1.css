@@ -11,10 +11,17 @@ body {
   font-family: 'YoonChoWooSan', sans-serif;
 }
 
+#title {
+  font-size: 50px;
+  position: fixed;
+  top: 200px;
+  left: 100px;
+}
+
 #start-button1 {
   position: fixed;
   top: 400px;
-  left: 80px;
+  left: 10px;
   color: white;
   font-weight: 700;
   font-size: 20px;
@@ -25,7 +32,7 @@ body {
 #start-button2 {
   position: fixed;
   top: 400px;
-  left: 130px;
+  left: 140px;
   color: white;
   font-weight: 700;
   font-size: 20px;
@@ -36,7 +43,7 @@ body {
 #start-button3 {
   position: fixed;
   top: 400px;
-  left: 180px;
+  left: 260px;
   color: white;
   font-weight: 700;
   font-size: 20px;
@@ -47,10 +54,23 @@ body {
 #start-button4 {
   position: fixed;
   top: 400px;
-  left: 200px;
+  left: 330px;
   color: white;
   font-weight: 700;
   font-size: 20px;
   text-decoration: none;
   font-family: 'YoonChoWooSan', sans-serif;
+}
+
+#ppan1 {
+  width: 100px;
+  position: fixed;
+  top: 100px;
+}
+
+#ppan2 {
+  width: 100px;
+  top: 500px;
+  right: 30px;
+  position: fixed;
 }
