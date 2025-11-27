@@ -151,9 +151,17 @@ body {
     animation: lightEffect 1s ease-out;
 }
 
+#result-title {
+    font-family: 'YoonChoWooSan', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 #result-img {
-    width: 80%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 380px;
     height: auto;
     display: none;
     animation: popIn 0.5s ease-out;
@@ -161,11 +169,11 @@ body {
 
 /* 결과 버튼 전체 묶음 */
 #button-container {
-    margin-top: 20px;
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
     /* 세로로 정렬 */
-    gap: 10px;
+    gap: 8px;
     align-items: center;
 }
 
@@ -173,11 +181,11 @@ body {
 .start-button {
     color: white;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     font-family: 'YoonChoWooSan', sans-serif;
-    width: 120px;
-    height: 50px;
+    width: 110px;
+    height: 42px;
     background-color: deeppink;
     border-radius: 10px;
     display: flex;
@@ -193,9 +201,9 @@ body {
     color: white;
     font-family: 'YoonChoWooSan', sans-serif;
     font-weight: 700;
-    font-size: 20px;
-    width: 120px;
-    height: 50px;
+    font-size: 16px;
+    width: 110px;
+    height: 42px;
     background-color: deepskyblue;
     border-radius: 10px;
     display: flex;

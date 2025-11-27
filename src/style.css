@@ -242,3 +242,18 @@ body {
   animation: rattle 0.5s infinite;
   /* 애니메이션 적용 */
 }
+
+#dic-button {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'YoonChoWooSan', sans-serif;
+  width: 120px;
+  height: 50px;
+  background-color: turquoise;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
