@@ -1,23 +1,15 @@
-#next-text {
-  position: fixed;
-  top: 100px;
-  left: 90px;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: 'YoonChoWooSan', sans-serif;
-}
-
-#non-imge {
-  position: fixed;
-  top: 200px;
-  left: 90px;
-  width: 350px;
-  height: auto;
-}
-
 html,
 body {
   font-family: 'YoonChoWooSan', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  overflow: hidden;
 }
 
 @font-face {
@@ -28,26 +20,23 @@ body {
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  text-align: center;
-  font-family: sans-serif;
-  background-color: #ffffff;
 }
 
 /* 상단 텍스트 */
 #next-text {
-  margin-top: 40px;
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 /* 괴물 이미지 */
-
+#non-imge {
+  width: 80%;
+  max-width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+}
 
 /* HP 바 컨테이너 */
 #hp-container {
@@ -56,7 +45,7 @@ body {
   height: 20px;
   border: 2px solid #000;
   border-radius: 10px;
-  margin: 10px auto 0;
+  margin: 0 auto 20px;
   background-color: #eee;
   overflow: hidden;
 }
@@ -64,7 +53,6 @@ body {
 /* 실제 HP 게이지 */
 #hp-bar {
   width: 100%;
-  /* 처음에는 풀피 */
   height: 100%;
   background-color: crimson;
   transition: width 0.2s ease;
@@ -72,15 +60,14 @@ body {
 
 /* "날 이겨라" 텍스트 */
 #sorry {
-  margin-top: 20px;
   font-size: 20px;
   font-weight: 600;
   font-family: 'YoonChoWooSan', sans-serif;
+  margin-bottom: 20px;
 }
 
 /* 뒤로가기 버튼 – 처음엔 숨김 */
 #back-btn {
-  margin-top: 25px;
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 8px;
@@ -90,24 +77,12 @@ body {
   cursor: pointer;
   display: none;
   font-family: 'YoonChoWooSan', sans-serif;
-  /* JS에서 HP 0되면 block으로 바꿔줌 */
+  width: auto;
+  min-width: 150px;
+  margin-bottom: 20px;
+  /* Add spacing below button */
 }
 
-/* 모바일 대응 */
-@media (max-width: 480px) {
-  #next-text {
-    font-size: 1.2rem;
-  }
-
-  #non-imge {
-    width: 300px;
-    height: auto;
-  }
-
-  #back-btn {
-    width: 70%;
-  }
-}
 
 /* Interstitial Overlay */
 #interstitial-overlay {
@@ -122,9 +97,13 @@ body {
   /* Hidden by default */
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   z-index: 9999;
   font-family: 'YoonChoWooSan', sans-serif;
   cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  flex-direction: column;
+  /* Ensure text stacks if needed */
 }

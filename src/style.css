@@ -15,6 +15,15 @@
 html,
 body {
   font-family: 'YoonChoWooSan', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 /* 모바일 대응 */
@@ -26,63 +35,62 @@ body {
   #explanation {
     font-size: 0.9rem;
   }
-
-  #start-button {
-    width: 80%;
-  }
 }
 
 #title {
-  font-size: 40px;
+  font-size: 8vw;
   font-weight: 800;
-  /* 전역 폰트 사용: 개별 font-family 삭제 혹은 통일 */
   font-family: 'YoonChoWooSan', sans-serif;
-  position: fixed;
-  top: 250px;
-  left: 90px;
+  margin-bottom: 20px;
+  text-align: center;
+  z-index: 10;
 }
 
 #explanation {
-  font-size: 1rem;
+  font-size: 4vw;
   color: black;
-  margin-bottom: 1.8rem;
+  margin-bottom: 40px;
   font-family: 'YoonChoWooSan', sans-serif;
-  position: fixed;
-  top: 330px;
-  left: 130px;
+  text-align: center;
+  z-index: 10;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  z-index: 10;
 }
 
 #start-button {
-  position: fixed;
-  top: 380px;
-  left: 80px;
   color: white;
   font-weight: 700;
   font-size: 20px;
   text-decoration: none;
   font-family: 'YoonChoWooSan', sans-serif;
-  width: 100px;
-  height: 40px;
+  width: 120px;
+  height: 50px;
   background-color: deeppink;
   border-radius: 10px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #none-button {
   text-decoration: none;
   color: white;
   font-family: 'YoonChoWooSan', sans-serif;
-  position: fixed;
-  top: 380px;
-  left: 240px;
   font-weight: 700;
   font-size: 20px;
-  width: 100px;
-  height: 40px;
+  width: 120px;
+  height: 50px;
   background-color: deepskyblue;
   border-radius: 10px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* 풍선 기본 스타일 */
 .balloon {
@@ -228,7 +236,7 @@ body {
 
 #balloon {
   font-size: 13px;
-  position: fixed;
+  position: absolute;
   top: 600px;
   left: 280px;
   animation: rattle 0.5s infinite;

@@ -17,6 +17,7 @@ function updateHpBar() {
   if (currentHp <= 0) {
     // 괴물 숨기고 뒤로가기 버튼 표시
     monster.style.display = 'none';
+    document.getElementById('hp-container').style.display = 'none'; // HP 바도 숨김
     backBtn.style.display = 'inline-block';
     sorryText.innerText = "알겠어 가라..";
   }

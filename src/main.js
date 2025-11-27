@@ -20,5 +20,23 @@ balloons.forEach((balloon) => {
   balloon.addEventListener('click', pop);
   balloon.addEventListener('touchstart', pop, { passive: false });
 });
+const DESIGN_WIDTH = 390;   // 기준 너비(px)
+const DESIGN_HEIGHT = 844;  // 기준 높이(px)
+
+function resizeGame() {
+  const game = document.getElementById('game');
+  if (!game) return;
+
+  const scale = Math.min(
+    window.innerWidth / DESIGN_WIDTH,
+    window.innerHeight / DESIGN_HEIGHT
+  );
+
+  game.style.transform = `scale(${scale})`;
+}
+
+// 처음 로드 + 리사이즈마다 다시 계산
+window.addEventListener('load', resizeGame);
+window.addEventListener('resize', resizeGame);
 
 

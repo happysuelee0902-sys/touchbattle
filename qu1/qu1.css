@@ -9,68 +9,177 @@
 html,
 body {
   font-family: 'YoonChoWooSan', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  /* Optional: background color */
+  overflow: hidden;
+  /* Prevent scrolling if everything fits */
 }
 
 #title {
-  font-size: 50px;
-  position: fixed;
-  top: 200px;
-  left: 100px;
+  font-size: 8vw;
+  /* Responsive font size */
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-#start-button1 {
-  position: fixed;
-  top: 400px;
-  left: 10px;
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none;
-  font-family: 'YoonChoWooSan', sans-serif;
+/* Container for buttons if needed, or just let them stack */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 0;
 }
 
-#start-button2 {
-  position: fixed;
-  top: 400px;
-  left: 140px;
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none;
-  font-family: 'YoonChoWooSan', sans-serif;
-}
-
-#start-button3 {
-  position: fixed;
-  top: 400px;
-  left: 260px;
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none;
-  font-family: 'YoonChoWooSan', sans-serif;
-}
-
+#start-button1,
+#start-button2,
+#start-button3,
 #start-button4 {
-  position: fixed;
-  top: 400px;
-  left: 330px;
-  color: white;
+  position: static;
+  /* Reset fixed */
+  color: #333;
+  /* Changed to dark for visibility on light bg, or keep white if bg is dark */
   font-weight: 700;
-  font-size: 20px;
+  font-size: 5vw;
+  /* Responsive font size */
   text-decoration: none;
   font-family: 'YoonChoWooSan', sans-serif;
+  display: block;
+  background-color: #000;
+  /* Example button style */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
 }
+
+#start-button1 a,
+#start-button2 a,
+#start-button3 a,
+#start-button4 a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 
 #ppan1 {
-  width: 100px;
-  position: fixed;
+  width: 20%;
+  max-width: 100px;
+  position: absolute;
   top: 100px;
+  left: 20px;
+  animation-name: float1;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #ppan2 {
-  width: 100px;
-  top: 500px;
-  right: 30px;
-  position: fixed;
+  width: 20%;
+  max-width: 100px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  animation-name: float2;
+  animation-duration: 12s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* 떠다니는 모션 */
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-10px, -40px);
+  }
+
+  100% {
+    transform: translate(15px, -80px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(20px, -30px) scale(1.05);
+  }
+
+  100% {
+    transform: translate(-10px, -70px) scale(0.95);
+  }
+}
+
+#balloon {
+  font-size: 13px;
+  position: absolute;
+  top: 600px;
+  left: 30px;
+  animation: rattle 0.5s infinite;
+  /* 애니메이션 적용 */
+}
+
+@keyframes rattle {
+  0% {
+    transform: translate(0.5px, 0.5px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-0.5px, -1px) rotate(-0.5deg);
+  }
+
+  20% {
+    transform: translate(-1.5px, 0px) rotate(0.5deg);
+  }
+
+  30% {
+    transform: translate(1.5px, 1px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(0.5px, -0.5px) rotate(0.5deg);
+  }
+
+  50% {
+    transform: translate(-0.5px, 1px) rotate(-0.5deg);
+  }
+
+  60% {
+    transform: translate(-1.5px, 0.5px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(1.5px, 0.5px) rotate(-0.5deg);
+  }
+
+  80% {
+    transform: translate(-0.5px, -0.5px) rotate(0.5deg);
+  }
+
+  90% {
+    transform: translate(0.5px, 1px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0.5px, -1px) rotate(-0.5deg);
+  }
 }
