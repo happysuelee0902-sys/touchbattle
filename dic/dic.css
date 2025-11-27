@@ -1,0 +1,99 @@
+/* ===== 짤 도감 ===== */
+@font-face {
+    font-family: 'YoonChoWooSan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+#dic-title {
+    font-family: 'YoonChoWooSan', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 위쪽 버튼 두 개 컨테이너 */
+#dic-button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 도감 그리드 */
+#gallery {
+    width: 90%;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* 각 칸 */
+.card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 정사각형 */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 아직 안 뽑힌 칸 (검정 반투명 + ?) */
+.card-locked {
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-locked span {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'YoonChoWooSan', sans-serif;
+}
+
+.start-button {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'YoonChoWooSan', sans-serif;
+    width: 120px;
+    height: 50px;
+    background-color: deeppink;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.none-button {
+    text-decoration: none;
+    color: white;
+    font-family: 'YoonChoWooSan', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
+    background-color: deepskyblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}

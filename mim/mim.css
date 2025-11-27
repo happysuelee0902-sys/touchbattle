@@ -150,3 +150,64 @@ body {
 .light-burst {
     animation: lightEffect 1s ease-out;
 }
+
+#result-img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    display: none;
+    animation: popIn 0.5s ease-out;
+}
+
+/* 결과 버튼 전체 묶음 */
+#button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* 세로로 정렬 */
+    gap: 10px;
+    align-items: center;
+}
+
+/* 핑크 버튼 공통 (홈, 다시 뽑기) */
+.start-button {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'YoonChoWooSan', sans-serif;
+    width: 120px;
+    height: 50px;
+    background-color: deeppink;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* 파랑 버튼 (짤 도감) */
+.none-button {
+    text-decoration: none;
+    color: white;
+    font-family: 'YoonChoWooSan', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
+    background-color: deepskyblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'YoonChoWooSan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
