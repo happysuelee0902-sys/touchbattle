@@ -162,6 +162,10 @@ body {
 #result-img {
     width: 90%;
     max-width: 380px;
+    max-height: 50vh;
+    /* 화면 높이의 50%까지만 차지하게 제한 */
+    object-fit: contain;
+    /* 비율 유지하며 맞춤 */
     height: auto;
     display: none;
     animation: popIn 0.5s ease-out;
