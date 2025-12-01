@@ -9,7 +9,7 @@ const progressText = document.getElementById('progress-text');
 const buttonContainer = document.getElementById('button-container');
 const retryBtn = document.getElementById('retry-btn');
 
-const MAX_CLICKS = 100;
+const MAX_CLICKS = 30000;
 let clickCount = 0;
 
 // URL에서 mood 읽기 (?mood=happy 이런 식으로)
